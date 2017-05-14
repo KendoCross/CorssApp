@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:local="clr-namespace:CrossApp;assembly=CrossApp"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CrossApp.DetailPage">
+  <ContentPage.Resources>
+    <ResourceDictionary>
+      <local:DoubleToStringConverter x:Key="stringConverter" />
+    </ResourceDictionary>
+  </ContentPage.Resources>
+  <Grid >
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+      <RowDefinition Height="Auto" />
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+      <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+    
+    <Button  Clicked="OnButtonClicked" Text="返回" HorizontalOptions="Start" />
+
+    <Label Text="金额：" Grid.Row="1" Grid.Column="0" Font="Large" HorizontalTextAlignment="End" VerticalTextAlignment="Center" />
+    <Entry Grid.Row="1" Grid.Column="1" Keyboard="Numeric" Placeholder="金额" Text="{Binding Total, Converter={StaticResource stringConverter}}" />
+
+    <Label Text="月数：" Grid.Row="2" Grid.Column="0" Font="Large" HorizontalTextAlignment="End" VerticalTextAlignment="Center" />
+    <Entry Grid.Row="2" Grid.Column="1" Keyboard="Numeric" Placeholder="月数" Text="{Binding Nums,&#xA; Converter={StaticResource stringConverter}}" />
+
+    <Label Text="利率：" Grid.Row="3" Grid.Column="0" Font="Large" HorizontalTextAlignment="End" VerticalTextAlignment="Center" />
+    <Entry Grid.Row="3" Grid.Column="1" Keyboard="Numeric" Text="{Binding Percent,&#xA; Converter={StaticResource stringConverter}}" />
+
+    <Slider Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="2" Minimum="0" Maximum="100" Value="{Binding Percent,&#xA;Mode=TwoWay}" />
+
+    <Label Text="月供" Grid.Row="5" Grid.Column="0" Font="Large" HorizontalTextAlignment="End" VerticalTextAlignment="Center" />
+    <ContentView BackgroundColor="#40808080" Grid.Row="5" Grid.Column="1" Padding="10, 10, 40, 10">
+      <Label Text="{Binding Result, &#xA; StringFormat='{0:C}'}" Font="Large" HorizontalTextAlignment="End" />
+    </ContentView>
+  </Grid>
+</ContentPage>

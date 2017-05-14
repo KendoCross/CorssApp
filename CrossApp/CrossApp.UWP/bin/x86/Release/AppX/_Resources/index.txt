@@ -1,0 +1,4 @@
+CrossApp, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  CrossApp.MainPage.xaml
+  CrossApp.App.xaml
+  CrossApp.DetailPage.xaml

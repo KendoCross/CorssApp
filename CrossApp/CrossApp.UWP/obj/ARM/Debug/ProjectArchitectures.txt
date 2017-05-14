@@ -1,0 +1,2 @@
+G:\11 Xamarin\CrossApp\CrossApp\CrossApp.UWP\CrossApp.UWP.csproj;arm
+G:\11 Xamarin\CrossApp\CrossApp\CrossApp\CrossApp.csproj;neutral

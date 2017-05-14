@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CrossApp"
+             x:Class="CrossApp.MainPage"
+            
+             >
+  <ContentPage.Resources>
+    	<ResourceDictionary>
+			<local:AppViewModel x:Key="vm" />
+		</ResourceDictionary>
+  </ContentPage.Resources>
+  <ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness"  iOS="20, 40, 20, 20" Android="2, 2, 2, 2" />
+  </ContentPage.Padding>
+
+  
+  <Grid>
+    <Grid.RowDefinitions>
+      <RowDefinition Height="Auto"/>
+      <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Horizontal" >
+      <Image Source="logo.png"/>
+      <Label Text="科技部" VerticalTextAlignment="End" FontSize="22"/>
+    </StackLayout>
+    <ListView ItemsSource="{Binding  CreditManagers}" Grid.Row="1" SeparatorColor="Green" HasUnevenRows="true" 
+              ItemSelected="OnItemSelected" x:Name="listView">
+      <ListView.ItemTemplate>
+         <DataTemplate>
+                    <ViewCell>
+                      <Grid>
+                        <Grid.RowDefinitions>
+                          <RowDefinition Height="Auto"/>
+                          <RowDefinition Height="Auto"/>
+                          <RowDefinition Height="Auto"/>
+                          <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                           <ColumnDefinition Width="50"/>
+                           <ColumnDefinition Width="*"/>
+                           <ColumnDefinition Width="Auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="th.jpg" Grid.RowSpan="4" VerticalOptions="Center"/>
+                        <Label Text="{Binding Name}" Grid.Column="1" />
+                        <Label Text="{Binding Organization}" Grid.Column="1" Grid.Row="1"/>
+                        <Button  Grid.Column="2" Text="Call Me" BorderColor="Maroon"  BorderWidth="1" BorderRadius="3" TextColor="#FF4500" Margin="3,1,3,1" 
+                                 Grid.RowSpan="3" VerticalOptions="Center" Clicked="btnCall_Click"/>
+                        
+                        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Orientation="Horizontal"
+                                     Grid.Column="1" Grid.Row="2">
+                            <Label Text="赋税"/>
+                            <Label Text="{Binding InterestRate}" TextColor="Red"/>
+                        
+                            <Label Text="人口" />
+                            <Label Text="{Binding MaxAmount}" TextColor="Red"/>
+                        </StackLayout>
+                        
+                         <Label Text="{Binding LoanTypes}" Grid.Column="1" Grid.Row="3"/>
+                        <Label Text="{Binding Distance}" Grid.Column="2" Grid.Row="3"  Margin="5" HorizontalTextAlignment="Center"/>
+                        
+                      </Grid>
+                    </ViewCell>
+                </DataTemplate>
+      </ListView.ItemTemplate>
+    </ListView>
+  </Grid>
+
+
+</ContentPage>

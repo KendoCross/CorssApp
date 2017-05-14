@@ -1,0 +1,5 @@
+G:\11 Xamarin\CrossApp\Com.KendoCross.ViewModel\bin\Debug\Com.KendoCross.ViewModel.dll
+G:\11 Xamarin\CrossApp\Com.KendoCross.ViewModel\bin\Debug\Com.KendoCross.ViewModel.pdb
+G:\11 Xamarin\CrossApp\Com.KendoCross.ViewModel\obj\Debug\Com.KendoCross.ViewModel.csprojResolveAssemblyReference.cache
+G:\11 Xamarin\CrossApp\Com.KendoCross.ViewModel\obj\Debug\Com.KendoCross.ViewModel.dll
+G:\11 Xamarin\CrossApp\Com.KendoCross.ViewModel\obj\Debug\Com.KendoCross.ViewModel.pdb

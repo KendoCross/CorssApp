@@ -1,0 +1,11 @@
+/out:"G:\11 Xamarin\CrossApp\CrossApp\CrossApp.UWP\obj\x86\Release\ilc\intermediate\SgGenerated\\"
+/int:"G:\11 Xamarin\CrossApp\CrossApp\CrossApp.UWP\obj\x86\Release\ilc\intermediate\\"
+/ref:"G:\11 Xamarin\CrossApp\CrossApp\CrossApp.UWP\obj\x86\Release\ilc\intermediate\PreMergeILTransformed\\"
+/ref:"G:\11 Xamarin\CrossApp\CrossApp\CrossApp.UWP\obj\x86\Release\ilc\intermediate\TransformedSRWR\\"
+/ref:"G:\11 Xamarin\CrossApp\CrossApp\CrossApp.UWP\obj\x86\Release\ilc\in\\"
+/ref:"G:\11 Xamarin\CrossApp\CrossApp\CrossApp.UWP\obj\x86\Release\ilc\in\\"
+/ref:"G:\11 Xamarin\CrossApp\CrossApp\CrossApp.UWP\obj\x86\Release\ilc\in\\"
+/ref:"C:\Program Files (x86)\MSBuild\Microsoft\.NetNative\x86\ilc\lib\Private\\"
+/ref:"G:\11 Xamarin\CrossApp\CrossApp\CrossApp.UWP\obj\x86\Release\ilc\in\WinMetadata\\"
+/ca:System.Private.CoreLib
+"@G:\11 Xamarin\CrossApp\CrossApp\CrossApp.UWP\obj\x86\Release\ilc\intermediate\PreMergeILTransformed\ComputedSerializationInput.txt"
